@@ -8,7 +8,7 @@ public class MainController {
 
     @GetMapping("/")
     public String home() {
-        return "index";
+        return "index"; // This serves the index.html file from templates
     }
 
     @GetMapping("/requirements")
