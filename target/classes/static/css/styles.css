@@ -1,0 +1,103 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100vh;
+    /*position: relative;*/
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Background Styling with Method 2 */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Images/VV_NAZ_MA.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7; /* Adjust transparency */
+    z-index: -1; /* Places the background behind the content */
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #DC143C;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #DC143C;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Image Container */
+.image-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+img {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Content Area */
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #DC143C;
+}
+
+/* Links */
+a {
+    color: #DC143C;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #696969; /* Blue background */
+    color: #fff; /* White text */
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
