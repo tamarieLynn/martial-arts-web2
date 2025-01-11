@@ -10,14 +10,13 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
-    color: #333;
+    color: #fff; /* Ensure text is readable on the black background */
     height: 100vh;
-    /*position: relative;*/
     overflow-y: auto; /* Allow vertical scrolling */
+    background: black; /* Fallback color */
 }
 
-/* Background Styling with Method 2 */
+/* Background Styling */
 body::before {
     content: "";
     position: absolute;
@@ -29,39 +28,87 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #333; /* Fallback color */
     opacity: 0.7; /* Adjust transparency */
-    background-color: #333; /* Fallback color (dark gray) */
     z-index: -1; /* Places the background behind the content */
 }
-/* Header */
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #DC143C;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+
+/* Header Section */
+header {
+    position: relative;
+    width: 100%;
+    max-width: 1288px;
+    height: 250px;
+    margin: 0 auto;
+    background: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Navigation Styling */
-nav ul {
+/* Header Title */
+header h1 {
+    position: absolute;
+    top: 10px; /* Move the title up */
+    width: 100%;
+    max-width: 1228px;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    color: #FF1313;
+}
+
+/* Red Rectangle */
+header .red-bar {
+    position: absolute;
+    width: 100%;
+    height: 94px;
+    bottom: 0;
+    background: #FF1313;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Navigation Buttons */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 190px;
+}
+
+nav a {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(90deg, #D9D9D9 0%, #737373 100%);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
     display: flex;
     justify-content: center;
-    list-style: none;
-    background-color: #DC143C;
-    padding: 10px 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
+    align-items: center;
+    font-family: 'Keania One', sans-serif;
+    font-size: 30px;
+    color: #000000;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav a:hover {
+    background: #FF1313;
+    color: #FFFFFF;
+}
+
+/* Paragraph Styling */
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #DC143C;
 }
 
 /* Image Container */
@@ -75,29 +122,29 @@ img {
     max-width: 600px;
     height: auto;
     margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
 }
 
-/* Content Area */
-p {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #DC143C;
-}
-
-/* Links */
-a {
-    color: #DC143C;
+/* Link Button Styling */
+a.link-button {
+    color: #fff; /* White text */
     text-decoration: none;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #696969; /* Blue background */
-    color: #fff; /* White text */
+    background-color: #696969; /* Button background */
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
 }
 
-a:hover {
+a.link-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+
+/* Individual Navigation Button Ordering */
+.nav-buttons .requirements { order: 1; }
+.nav-buttons .pledges { order: 2; }
+.nav-buttons .photos { order: 3; }
+.nav-buttons .instructors { order: 4; }
+.nav-buttons .home { order: 5; }

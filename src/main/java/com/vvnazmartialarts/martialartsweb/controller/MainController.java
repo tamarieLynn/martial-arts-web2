@@ -25,4 +25,7 @@ public class MainController {
     public String photos() {
         return "photos";  // This will return the photos.html page
     }
+
+    @GetMapping("/instructors")
+    public String instructors() { return "instructors"; }
 }
